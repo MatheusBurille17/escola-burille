@@ -1,0 +1,38 @@
+# Headers de segurança e performance para Netlify/Vercel
+
+/*
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http:; media-src 'self' https://lh3.googleusercontent.com; connect-src 'self' https://www.google-analytics.com https://wa.me; frame-src 'self' https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me;
+  
+  # Segurança
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  
+  # Performance
+  Cache-Control: public, max-age=31536000, immutable
+  
+  # HSTS (HTTP Strict Transport Security)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+# Cache para assets estáticos
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache para imagens
+/images/*
+  Cache-Control: public, max-age=2592000, immutable
+
+# Cache para fontes
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Sem cache para HTML
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Sem cache para service worker
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate

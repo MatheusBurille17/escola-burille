@@ -1,0 +1,18 @@
+# robots.txt para Escola Burille
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://escolaburille.com.br/sitemap.xml
+
+# Disallow admin areas (se houver no futuro)
+Disallow: /admin/
+Disallow: /api/
+
+# Allow all images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Crawl delay (opcional)
+Crawl-delay: 1

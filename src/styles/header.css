@@ -1,0 +1,350 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-dark);
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+}
+
+.header-container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4xl);
+}
+
+.logo {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-light);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+}
+
+.logo:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.nav-desktop {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.nav-desktop a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all var(--transition-base);
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-desktop a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width var(--transition-base);
+}
+
+.nav-desktop a:hover::after {
+  width: 100%;
+}
+
+.nav-desktop a:hover {
+  color: var(--color-text-light);
+}
+
+.nav-desktop a.active {
+  color: var(--color-text-light);
+  font-weight: var(--font-weight-semibold);
+}
+
+.nav-desktop a.active::after {
+  width: 100%;
+}
+
+.nav-desktop a.btn-agendar {
+  background-color: transparent;
+  color: var(--color-text-light);
+  padding: 6px 16px;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: var(--font-size-xs);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.nav-desktop a.btn-agendar::after {
+  display: none;
+}
+
+.nav-desktop a.btn-agendar:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  transition: all var(--transition-base);
+  z-index: 1001;
+  position: relative;
+}
+
+.menu-toggle:hover {
+  color: var(--color-secondary);
+  transform: scale(1.1);
+}
+
+.menu-toggle.open {
+  position: fixed;
+  right: var(--spacing-md);
+  top: var(--spacing-md);
+}
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-bg-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md);
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.nav-mobile.open {
+  transform: translateX(0);
+}
+
+.nav-mobile a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: var(--font-size-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  text-align: center;
+  min-width: 280px;
+}
+
+.nav-mobile a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width var(--transition-base);
+}
+
+.nav-mobile a:hover::after,
+.nav-mobile a.active::after {
+  width: 80%;
+}
+
+.nav-mobile a:hover {
+  color: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+.nav-mobile a.active {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-semibold);
+}
+
+
+
+.btn-agendar-mobile {
+  background-color: transparent;
+  color: var(--color-text-light);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  text-align: center;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: var(--font-size-md);
+  border: 2px solid var(--color-secondary);
+  margin-top: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-base);
+  min-width: 280px;
+}
+
+.btn-agendar-mobile::after {
+  display: none;
+}
+
+.btn-agendar-mobile:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    gap: var(--spacing-2xl);
+  }
+  
+  .nav-desktop a {
+    font-size: var(--font-size-xs);
+  }
+  
+  .nav-desktop a.btn-agendar {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .logo {
+    font-size: var(--font-size-lg);
+  }
+  
+  .nav-desktop {
+    display: none;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-mobile a {
+    font-size: var(--font-size-md);
+    min-width: 240px;
+  }
+  
+  .btn-agendar-mobile {
+    font-size: var(--font-size-sm);
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .logo {
+    font-size: var(--font-size-md);
+    letter-spacing: 0.15em;
+  }
+  
+  .menu-toggle {
+    font-size: var(--font-size-xl);
+  }
+  
+  .nav-mobile a {
+    font-size: var(--font-size-base);
+    min-width: 200px;
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  .btn-agendar-mobile {
+    font-size: var(--font-size-sm);
+    min-width: 200px;
+    padding: var(--spacing-sm) var(--spacing-xl);
+  }
+}
+
+/* Botão fixo abaixo do header - Mobile */
+.btn-agendar-fixed-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .btn-agendar-fixed-mobile {
+    display: block;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--color-secondary) 0%, #ffd700 100%);
+    color: var(--color-primary);
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    z-index: 999;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    border: none;
+    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 4px 15px rgba(218, 165, 32, 0.4);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 6px 20px rgba(218, 165, 32, 0.6);
+      transform: scale(1.02);
+    }
+  }
+  
+  .btn-agendar-fixed-mobile:hover {
+    background: linear-gradient(135deg, #ffd700 0%, var(--color-secondary) 100%);
+    color: var(--color-primary);
+    box-shadow: 0 6px 25px rgba(218, 165, 32, 0.7);
+    animation: none;
+  }
+  
+  .btn-agendar-fixed-mobile:active {
+    transform: scale(0.98);
+  }
+  
+  /* Ajuste para o conteúdo não ficar atrás do botão */
+  body {
+    padding-top: 110px;
+  }
+}

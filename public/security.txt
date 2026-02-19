@@ -1,0 +1,5 @@
+Contact: mailto:escolaburille@gmail.com
+Preferred-Languages: pt-BR, en
+Canonical: https://escolaburille.com.br/.well-known/security.txt
+Policy: https://escolaburille.com.br/security-policy
+Acknowledgments: https://escolaburille.com.br/security-acknowledgments

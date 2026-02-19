@@ -1,0 +1,18 @@
+# humanstxt.org/
+# Os humanos por trás do site
+
+/* EQUIPE */
+Escola: Escola Burille
+Localização: Pato Branco, PR, Brasil
+Contato: escolaburille@gmail.com
+Instagram: @escolaburille
+
+/* SITE */
+Última atualização: 2026/02/18
+Linguagem: Português (Brasil)
+Doctype: HTML5
+IDE: Visual Studio Code, Kiro
+Tecnologias: React, Vite, React Router
+
+/* AGRADECIMENTOS */
+Obrigado a todos os alunos, professores e famílias que fazem parte da nossa comunidade!

@@ -1,0 +1,250 @@
+.modalidades {
+  background-color: var(--color-bg-light);
+  padding: var(--spacing-4xl) 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.modalidades .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modalidades .section-title {
+  font-size: var(--font-size-3xl);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  letter-spacing: 3px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.modalidades .section-subtitle {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-3xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modalidades-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.modalidade-card {
+  position: relative;
+  height: 500px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all var(--transition-smooth);
+  text-decoration: none;
+  display: block;
+}
+
+/* Ajustes específicos de posicionamento por modalidade */
+.modalidade-card:nth-child(3) {
+  /* Judo - terceiro card */
+  background-position: center 40%;
+}
+
+.modalidade-card:nth-child(4) {
+  /* Move Fight - quarto card */
+  background-position: center 35%;
+}
+
+.modalidade-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  transition: background var(--transition-smooth);
+}
+
+.modalidade-card:hover .modalidade-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+.modalidade-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.modalidade-content {
+  position: absolute;
+  bottom: var(--spacing-2xl);
+  left: var(--spacing-xl);
+  right: var(--spacing-xl);
+  z-index: 2;
+  text-align: left;
+}
+
+.modalidade-subtitulo {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.modalidade-titulo {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-light);
+  letter-spacing: 3px;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.modalidade-saiba-mais {
+  display: inline-block;
+  margin-top: var(--spacing-md);
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 1px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all var(--transition-smooth);
+}
+
+.modalidade-card:hover .modalidade-saiba-mais {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsivo - Tablet */
+@media (max-width: 1024px) {
+  .modalidades {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .modalidades .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .modalidades-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+  
+  .modalidade-card {
+    height: 450px;
+  }
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 768px) {
+  .modalidades {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  .modalidades .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .modalidades .section-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .modalidades .section-subtitle {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .modalidades-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .modalidade-card {
+    height: 380px;
+  }
+  
+  /* Ajustes específicos para mobile - movendo para CIMA */
+  .modalidade-card:nth-child(3) {
+    /* Judo no mobile */
+    background-position: center 20%;
+  }
+
+  .modalidade-card:nth-child(4) {
+    /* Move Fight no mobile */
+    background-position: center 15%;
+  }
+
+  .modalidade-content {
+    bottom: var(--spacing-xl);
+    left: var(--spacing-lg);
+    right: var(--spacing-lg);
+  }
+
+  .modalidade-titulo {
+    font-size: var(--font-size-xl);
+  }
+  
+  .modalidade-subtitulo {
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .modalidades {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .modalidades .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .modalidades .section-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .modalidade-card {
+    height: 320px;
+  }
+  
+  /* Ajustes ainda mais para cima em telas pequenas */
+  .modalidade-card:nth-child(3) {
+    /* Judo em telas pequenas */
+    background-position: center 15%;
+  }
+
+  .modalidade-card:nth-child(4) {
+    /* Move Fight em telas pequenas */
+    background-position: center 10%;
+  }
+  
+  .modalidade-content {
+    bottom: var(--spacing-lg);
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+  
+  .modalidade-titulo {
+    font-size: var(--font-size-lg);
+    letter-spacing: 2px;
+  }
+}
