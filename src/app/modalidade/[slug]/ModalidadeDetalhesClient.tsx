@@ -84,6 +84,10 @@ export default function ModalidadeDetalhesClient({ slug }: { slug: string }) {
     setTimeout(() => setIsAutoPlaying(true), 5000);
   };
 
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '554699295745';
+  const whatsappMessage = `Olá! Gostaria de agendar uma aula experimental de ${modalidade.titulo}.`;
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
   return (
     <div className="modalidade-detalhes-container">
       {/* Hero Section */}
@@ -94,7 +98,14 @@ export default function ModalidadeDetalhesClient({ slug }: { slug: string }) {
           <span className="modalidade-hero-subtitulo">{modalidade.subtitulo}</span>
           <h1 className="modalidade-hero-titulo">{modalidade.titulo}</h1>
           <p className="modalidade-hero-descricao">{modalidade.descricao}</p>
-          <button className="btn-agendar-hero">Agendar Aula Experimental</button>
+          <a 
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-agendar-hero"
+          >
+            Agendar Aula Experimental
+          </a>
         </div>
       </div>
 
