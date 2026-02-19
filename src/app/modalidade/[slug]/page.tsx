@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import '@/styles/modalidade-detalhes.css';
-import ModalidadeDetalhesClient, { modalidadesData } from './ModalidadeDetalhesClient';
+import ModalidadeDetalhesClient from './ModalidadeDetalhesClient';
+import { modalidadesData } from '@/data/modalidades';
 
 export async function generateStaticParams() {
   return Object.keys(modalidadesData).map((slug) => ({ slug }));
