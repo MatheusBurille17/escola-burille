@@ -241,6 +241,326 @@
   letter-spacing: 1px;
 }
 
+/* Sistema de Graduação */
+.sistema-graduacao {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.graduacao-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.graduacao-info h2 {
+  font-family: var(--font-family-display);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-dark);
+}
+
+.graduacao-info .highlight {
+  color: var(--color-primary);
+}
+
+.graduacao-intro {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--color-text-secondary);
+}
+
+.aspectos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aspecto-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.aspecto-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.aspecto-text h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-dark);
+  font-weight: var(--font-weight-semibold);
+}
+
+.aspecto-text p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.graduacao-imagem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graduacao-img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  transition: all var(--transition-smooth);
+}
+
+.graduacao-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Pilares da Metodologia */
+.pilares-metodologia {
+  padding: 5rem 0;
+  background: var(--color-bg-white);
+}
+
+.pilares-container {
+  max-width: 100%;
+  padding: 0 2rem;
+}
+
+.pilares-metodologia h2 {
+  font-family: var(--font-family-display);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-dark);
+}
+
+.pilares-metodologia .highlight {
+  color: var(--color-primary);
+}
+
+.faixas-etarias-intro {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: var(--color-text-secondary);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.pilar-card {
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-md);
+  color: white;
+  transition: all var(--transition-smooth);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  height: 100%;
+}
+
+.pilar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.pilar-card.azul {
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+}
+
+.pilar-card.amarelo {
+  background: linear-gradient(135deg, #fdd835 0%, #f9a825 100%);
+}
+
+.pilar-card.vermelho {
+  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+}
+
+.pilar-card.verde {
+  background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+}
+
+.pilar-card.roxo {
+  background: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
+}
+
+.pilar-card h3 {
+  font-family: var(--font-family-display);
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--font-weight-bold);
+}
+
+.pilar-foco {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.pilar-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pilar-card li {
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pilar-card.amarelo li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pilar-card li:last-child {
+  border-bottom: none;
+}
+
+.pilar-card li::before {
+  content: "•";
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* Carrossel de Turmas - Mobile */
+.pilares-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.pilares-carousel-track {
+  overflow: hidden;
+  width: 100%;
+  padding: 0 1rem;
+  touch-action: pan-y;
+  user-select: none;
+  cursor: grab;
+}
+
+.pilares-carousel-track:active {
+  cursor: grabbing;
+}
+
+.pilares-carousel-inner {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 1rem;
+}
+
+.pilares-carousel .pilar-card {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-dots .dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dots .dot.active {
+  background: var(--color-primary);
+  width: 2rem;
+  border-radius: 0.375rem;
+}
+
+@media (min-width: 769px) {
+  .pilares-carousel {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .pilares-grid {
+    display: none;
+  }
+}
+
+/* Ver mais professores - Mobile */
+.ver-mais-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-ver-mais {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border: 2px solid var(--color-primary);
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+  letter-spacing: 1px;
+}
+
+.btn-ver-mais:hover {
+  background: transparent;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .professor-card.hidden-mobile {
+    display: none;
+  }
+  
+  .modalidade-professores .professores-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .ver-mais-container {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .modalidade-hero {
     min-height: 550px;
@@ -486,327 +806,5 @@
   
   .pilar-card li {
     font-size: 0.9rem;
-  }
-}
-
-/* Sistema de Graduação */
-.sistema-graduacao {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-}
-
-.graduacao-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.graduacao-info h2 {
-  font-family: var(--font-family-display);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-dark);
-}
-
-.graduacao-info .highlight {
-  color: var(--color-primary);
-}
-
-.graduacao-intro {
-  font-size: 1.125rem;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  color: var(--color-text-secondary);
-}
-
-.aspectos-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.aspecto-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.aspecto-icon {
-  font-size: 2.5rem;
-  flex-shrink: 0;
-}
-
-.aspecto-text h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: var(--color-text-dark);
-  font-weight: var(--font-weight-semibold);
-}
-
-.aspecto-text p {
-  font-size: 1rem;
-  color: var(--color-text-secondary);
-  margin: 0;
-}
-
-.graduacao-imagem {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.graduacao-img {
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-xl);
-  transition: all var(--transition-smooth);
-}
-
-.graduacao-img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-/* Pilares da Metodologia */
-.pilares-metodologia {
-  padding: 5rem 0;
-  background: var(--color-bg-white);
-}
-
-.pilares-container {
-  max-width: 100%;
-  padding: 0 2rem;
-}
-
-.pilares-metodologia h2 {
-  font-family: var(--font-family-display);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: var(--font-weight-regular);
-  color: var(--color-text-dark);
-}
-
-.pilares-metodologia .highlight {
-  color: var(--color-primary);
-}
-
-.faixas-etarias-intro {
-  text-align: center;
-  font-size: 1.125rem;
-  line-height: 1.8;
-  margin-bottom: 3rem;
-  color: var(--color-text-secondary);
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.pilares-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-}
-
-.pilar-card {
-  padding: 3rem 2.5rem;
-  border-radius: var(--radius-md);
-  color: white;
-  transition: all var(--transition-smooth);
-  box-shadow: var(--shadow-md);
-  width: 100%;
-  height: 100%;
-}
-
-.pilar-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
-}
-
-.pilar-card.azul {
-  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
-}
-
-.pilar-card.amarelo {
-  background: linear-gradient(135deg, #fdd835 0%, #f9a825 100%);
-}
-
-.pilar-card.vermelho {
-  background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
-}
-
-.pilar-card.verde {
-  background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
-}
-
-.pilar-card.roxo {
-  background: linear-gradient(135deg, #8e24aa 0%, #6a1b9a 100%);
-}
-
-.pilar-card h3 {
-  font-family: var(--font-family-display);
-  font-size: 1.75rem;
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: var(--font-weight-bold);
-}
-
-.pilar-foco {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  font-style: italic;
-}
-
-.pilar-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pilar-card li {
-  padding: 0.75rem 0;
-  font-size: 1rem;
-  line-height: 1.6;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.pilar-card.amarelo li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.pilar-card li:last-child {
-  border-bottom: none;
-}
-
-.pilar-card li::before {
-  content: "•";
-  margin-right: 0.5rem;
-  font-weight: bold;
-}
-
-
-
-/* Carrossel de Turmas - Mobile */
-.pilares-carousel {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.pilares-carousel-track {
-  overflow: hidden;
-  width: 100%;
-  padding: 0 1rem;
-  touch-action: pan-y;
-  user-select: none;
-  cursor: grab;
-}
-
-.pilares-carousel-track:active {
-  cursor: grabbing;
-}
-
-.pilares-carousel-inner {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  gap: 1rem;
-}
-
-.pilares-carousel .pilar-card {
-  min-width: 100%;
-  flex-shrink: 0;
-}
-
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
-}
-
-.carousel-dots .dot {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.2);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.carousel-dots .dot.active {
-  background: var(--color-primary);
-  width: 2rem;
-  border-radius: 0.375rem;
-}
-
-@media (min-width: 769px) {
-  .pilares-carousel {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .pilares-grid {
-    display: none;
-  }
-}
-
-/* Ver mais professores - Mobile */
-.ver-mais-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.btn-ver-mais {
-  background: var(--color-primary);
-  color: var(--color-text-light);
-  border: 2px solid var(--color-primary);
-  padding: 0.75rem 2rem;
-  font-size: 0.9rem;
-  font-weight: var(--font-weight-semibold);
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-base);
-  letter-spacing: 1px;
-}
-
-.btn-ver-mais:hover {
-  background: transparent;
-  color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-@media (max-width: 768px) {
-  .professor-card.hidden-mobile {
-    display: none;
-  }
-  
-  .modalidade-professores .professores-grid {
-    grid-template-columns: 1fr;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 769px) {
-  .ver-mais-container {
-    display: none;
   }
 }
