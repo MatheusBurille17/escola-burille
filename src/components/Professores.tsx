@@ -35,7 +35,7 @@ export default function Professores() {
   return (
     <section className="professores" id="professores" aria-labelledby="professores-title">
       <div className="container">
-        <h2 className="section-title" id="professores-title">Nosso equipe</h2>
+        <h2 className="section-title" id="professores-title">Nossa equipe</h2>
         <p className="section-subtitle">
           Conheça nossa equipe de instrutores qualificados e apaixonados pelo ensino
         </p>
