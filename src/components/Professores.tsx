@@ -25,9 +25,9 @@ export default function Professores() {
     { id: 6, nome: 'Thais', especialidade: 'Instrutora de Jiu-jitsu', experiencia: '2 anos', descricao: 'Instrutora experiente.', foto: '/images/professores/thais.webp', instagram: 'https://www.instagram.com/thaispiovezana/' },
     { id: 7, nome: 'Matheus Burille', especialidade: 'Instrutor de Jiu-jitsu', experiencia: '2 anos', descricao: 'Instrutor qualificado.', foto: '/images/professores/matheus-burille.webp', instagram: 'https://www.instagram.com/matheus.burille/' },
     { id: 8, nome: 'Néia', especialidade: 'Instrutora de Jiu-jitsu', experiencia: '2 anos', descricao: 'Instrutora dedicada.', foto: '/images/professores/neia.webp', instagram: 'https://www.instagram.com/laudineiateixeira/' },
-    { id: 9, nome: 'Fabiolla', especialidade: 'Atendimento e professora de Move & Fight', experiencia: '2 anos', descricao: 'Atendimento e instrução.', foto: '/images/professores/fabiolla.webp', instagram: 'https://www.instagram.com/blonkoski.carlos/' },
-    { id: 10, nome: 'Luciana', especialidade: 'Atendimento', experiencia: '2 anos', descricao: 'Atendimento ao cliente.', foto: '/images/professores/luciana.webp', instagram: 'https://www.instagram.com/blonkoski.carlos/' },
-    { id: 11, nome: 'Jairo', especialidade: 'Gerente', experiencia: '2 anos', descricao: 'Gerente da escola.', foto: '/images/professores/jairo.webp', instagram: 'https://www.instagram.com/blonkoski.carlos/' },
+    { id: 9, nome: 'Fabiolla', especialidade: 'Atendimento e professora de Move & Fight', experiencia: '2 anos', descricao: 'Atendimento e instrução.', foto: '/images/professores/fabiolla.webp', instagram: '#' },
+    { id: 10, nome: 'Luciana', especialidade: 'Atendimento', experiencia: '2 anos', descricao: 'Atendimento ao cliente.', foto: '/images/professores/luciana.webp', instagram: '#' },
+    { id: 11, nome: 'Jairo Toss', especialidade: 'Gerente', experiencia: '2 anos', descricao: 'Gerente da escola.', foto: '/images/professores/jairo.webp', instagram: '#' },
   ];
 
   const [gridRef, isGridVisible] = useScrollAnimation({ threshold: 0.1 });
@@ -37,7 +37,7 @@ export default function Professores() {
       <div className="container">
         <h2 className="section-title" id="professores-title">Nossa equipe</h2>
         <p className="section-subtitle">
-          Conheça nossa equipe de instrutores qualificados e apaixonados pelo ensino
+          Conheça nossa equipe de instrutores e atendentes qualificados e apaixonados pelo ensino
         </p>
         <div className="professores-grid" ref={gridRef}>
           {professores.map((prof, index) => (

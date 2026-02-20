@@ -112,7 +112,7 @@ export default function Header() {
               className={activeSection === 'professores' ? 'active' : ''}
               onClick={(e) => handleNavClick(e, 'professores')}
             >
-              Professores
+              Equipe
             </a>
             <a 
               href="#sobre" 
@@ -177,7 +177,7 @@ export default function Header() {
             className={activeSection === 'professores' ? 'active' : ''}
             onClick={(e) => handleNavClick(e, 'professores')}
           >
-            Professores
+            Equipe
           </a>
           <a 
             href="#sobre" 
