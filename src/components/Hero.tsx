@@ -64,6 +64,7 @@ export default function Hero() {
         playsInline
         aria-hidden="true"
       >
+        <source src="/images/hero/hero-video-mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
         <source src="/images/hero/hero-video-2.mp4" type="video/mp4" />
       </video>
       <div className="hero-overlay"></div>
