@@ -411,6 +411,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--font-weight-bold);
+  white-space: pre-line;
 }
 
 .pilar-foco {

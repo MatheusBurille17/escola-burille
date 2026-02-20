@@ -51,7 +51,7 @@ export const modalidadesData: Record<string, ModalidadeData> = {
     },
     pilares: [
       {
-        titulo: 'BABY',
+        titulo: 'BABY\n(2 e 3 anos)',
         cor: 'azul',
         foco: 'Foco na disciplina',
         caracteristicas: [
@@ -63,7 +63,7 @@ export const modalidadesData: Record<string, ModalidadeData> = {
         ]
       },
       {
-        titulo: 'INFANTIL I',
+        titulo: 'INFANTIL I\n(3 a 7 anos)',
         cor: 'amarelo',
         foco: 'Foco no respeito',
         caracteristicas: [
@@ -76,7 +76,7 @@ export const modalidadesData: Record<string, ModalidadeData> = {
         ]
       },
       {
-        titulo: 'INFANTIL II',
+        titulo: 'INFANTIL II\n(8 a 11 anos)',
         cor: 'vermelho',
         foco: 'Foco na autoconfiança',
         caracteristicas: [
@@ -89,7 +89,7 @@ export const modalidadesData: Record<string, ModalidadeData> = {
         ]
       },
       {
-        titulo: 'INFANTO-JUVENIL',
+        titulo: 'INFANTO-JUVENIL\n(12 a 15 anos)',
         cor: 'verde',
         foco: 'Foco na sabedoria',
         caracteristicas: [
@@ -102,7 +102,7 @@ export const modalidadesData: Record<string, ModalidadeData> = {
         ]
       },
       {
-        titulo: 'ADULTO E JUVENIL',
+        titulo: 'ADULTO E JUVENIL\n(16+)',
         cor: 'roxo',
         foco: 'Foco na perseverança',
         caracteristicas: [
